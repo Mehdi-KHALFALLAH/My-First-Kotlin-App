@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,15 +17,12 @@ class MainActivity : AppCompatActivity() {
         val textDecrease = findViewById<TextView>(R.id.textDecrease)
         var count = 0
         var uncount = 0
-        btndecrease.setOnClickListener {
-            textDecrease.text = uncount.toString()
-            uncount +=  1
 
-        }
         btnclickme.setOnClickListener {
-
-            text.text = count.toString()
             count += 1
+            text.text = count.toString()
+            Toast.makeText(this, "hey I'm a Toast!", Toast.LENGTH_LONG).show()
+
 
         }
 
